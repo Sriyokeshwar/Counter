@@ -28,5 +28,9 @@ window.onload = function(){
     setTimeout(() => { t3.innerHTML = "APP";
     t3.classList.remove("fade-out");
     },4000);
-    
-    };
+    setTimeout(function() {
+        let h = document.getElementById("h");
+        h.style.transition = "background-color 5s";
+        h.style.backgroundColor = "#1050dcac";
+    }, 3500); 
+};

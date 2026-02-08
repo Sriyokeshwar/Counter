@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Counter</title>
     <link rel="stylesheet" href="style.css">
-    <script src="counter.js"></script> 
+    <script src="counter.js"></script>
 </head>
 
 <body>
     <div class="con">
         <div class="tt">
-            <h1>COUNTER APP</h1>
+            <h1 id="h" aria-live="polite">click to count</h1>
         </div>
         <div class="count">
             <h3 id="count"> 0 </h3>
         </div>
         <div class="btns">
-            <button class="add" onclick="add()"> Increase </button>
-            <button class="sub" onclick="sub()"> Decrease </button>
+            <button class="add" onclick="add()"> Add + </button>
             <button class="reset" onclick="reset()"> Reset </button>
+            <button class="sub" onclick="sub()"> Sub - </button>
         </div>
     </div>
 </body>

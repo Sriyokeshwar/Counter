@@ -15,18 +15,18 @@ function reset() {
 window.onload = function(){
     const t1 = document.getElementById("t1");
     t1.classList.add("fade-out");
-    setTimeout(() => { t1.innerHTML = "Counter";
+    setTimeout(() => { t1.innerHTML = "COUNTER";
     t1.classList.remove("fade-out");
-    },3000);
+    },4000);
     const t2 = document.getElementById("t2");
     t2.classList.add("fade-out");
     setTimeout(() => { t2.innerHTML = "";
     t2.classList.remove("fade-out");
-    },3000);
+    },4000);
     const t3 = document.getElementById("t3");
     t3.classList.add("fade-out");
-    setTimeout(() => { t3.innerHTML = "app";
+    setTimeout(() => { t3.innerHTML = "APP";
     t3.classList.remove("fade-out");
-    },3000);
+    },4000);
     
     };

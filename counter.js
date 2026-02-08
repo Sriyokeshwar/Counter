@@ -13,10 +13,20 @@ function reset() {
     document.getElementById("count").innerHTML = count;
 }
 window.onload = function(){
-    const h = document.getElementById("h");
-    h.classList.add("fade-out");
-    setTimeout(() => { h.innerHTML = "COUNTER APP";
-    h.classList.remove("fade-out");
-    },1000);
+    const t1 = document.getElementById("t1");
+    t1.classList.add("fade-out");
+    setTimeout(() => { t1.innerHTML = "Counter";
+    t1.classList.remove("fade-out");
+    },3000);
+    const t2 = document.getElementById("t2");
+    t2.classList.add("fade-out");
+    setTimeout(() => { t2.innerHTML = "";
+    t2.classList.remove("fade-out");
+    },3000);
+    const t3 = document.getElementById("t3");
+    t3.classList.add("fade-out");
+    setTimeout(() => { t3.innerHTML = "app";
+    t3.classList.remove("fade-out");
+    },3000);
     
     };

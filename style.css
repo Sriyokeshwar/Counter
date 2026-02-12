@@ -1,19 +1,24 @@
+/* Fixed Google Font Import */
 @import url('https://fonts.googleapis.com');
 
 
 body {
-    
-    height: 100vh;
-    justify-items: center;
-    align-content: center;
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    /* Explicitly set display to make centering work */
     place-items: center;
     font-family: 'Poppins', sans-serif;
+    background-color: #f1f8ff;
+    /* Optional background for contrast */
 }
 
-
 .con {
-    padding: 10px;
-    width: 60%;
+    padding: 20px;
+    width: 85%;
+    /* Fluid width for mobile */
+    max-width: 500px;
+    /* Cap size for desktop */
     border: 5px solid #15173D;
     border-radius: 30px;
     text-align: center;
@@ -21,10 +26,11 @@ body {
     background-image: linear-gradient(to right,
             rgba(0, 100, 200, 0.1),
             rgba(0, 150, 150, 0.1));
-
     filter: brightness(1.5);
-    letter-spacing: 1rem;
-    word-spacing: 2rem;
+
+    /* Fluid spacing that doesn't break small screens */
+    letter-spacing: clamp(0.1rem, 2vw, 0.5rem);
+    word-spacing: clamp(0.2rem, 4vw, 1rem);
     transition: all 0.5s ease;
 }
 
@@ -34,72 +40,90 @@ body {
 }
 
 .tt {
-
-    font-size: 25px;
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+    /* Scales with screen size */
     font-weight: bold;
     color: #050fd0;
-    border-radius:30px;
-}
-#h{
-    padding:10px;
-    border-radius:50px;
-
+    border-radius: 30px;
 }
 
-#t1,#t2,#t3{
+#h {
+    padding: 10px;
+    border-radius: 50px;
+}
+
+#t1,
+#t2,
+#t3 {
     opacity: 1;
     transition: all 4s ease;
-    text-shadow: 4px 4px 2px #3f9df5;
+    text-shadow: 4px 4px 2px #1789f5;
 }
-#t1.fade-out {
-    opacity: 0;
-    text-shadow:80px -15px 3px #ffffff;
-}
-#t2.fade-out {
-    opacity: 0;
-    text-shadow:80px -15px 3px #ffffff;
-}
+
+/* Logic for fading spans remains same */
+#t1.fade-out,
+#t2.fade-out,
 #t3.fade-out {
     opacity: 0;
-    text-shadow:80px -15px 3px #ffffff;
+    text-shadow: 80px -15px 1px #abcbff;
 }
 
-.count {
-    text-align:center;
-    font-size: 70px;
-    color: #252a7c;
+.count-display {
+    text-align: center;
+    font-size: clamp(3rem, 15vw, 6rem);
+    /* Huge on desktop, readable on mobile */
+    color: #0410f7;
+    margin: 20px 0;
 }
-
 
 .btns {
-
-    justify-content: space-between;
-    gap: 10px;
-}     
+    display: flex;
+    flex-direction: column;
+    /* Stack on mobile */
+    align-items: center;
+    gap: 15px;
+}
 
 button {
-    padding: 10px 20px;
-    width: 200px;
-    margin: 10px 15px;
+    padding: 12px 20px;
+    width: 100%;
+    /* Responsive button width */
+    max-width: 180px;
     border-radius: 50px;
     cursor: pointer;
-    border:none;
-    font-size: 35px;
+    border: none;
+    font-size: 24px;
+    /* Slightly smaller for better fit */
     font-weight: bold;
     color: white;
-    background-image: linear-gradient(90deg,#0581a7,#030bb3);
+    background-image: linear-gradient(90deg, #0581a7, #030bb3);
     box-shadow: 3px 3px 2px 1px #0080ff;
     transition: all 0.5s ease;
 }
 
+/* Tablet and Desktop Adjustments */
+@media (min-width: 600px) {
+    .btns {
+        flex-direction: row;
+        /* Side-by-side on larger screens */
+        justify-content: center;
+    }
+
+    .con {
+        letter-spacing: 0.5rem;
+        word-spacing: 1.5rem;
+        width: 60%;
+    }
+}
+
 button:hover {
-    background-image: linear-gradient(75deg,#4850e9, #4bc5ea);
+    background-image: linear-gradient(75deg, #4850e9, #4bc5ea);
     color: black;
-    text-shadow:2px 2px 5px #09637E;
+    text-shadow: 2px 2px 5px #09637E;
     box-shadow: 3px 3px 3px 3px #265959;
 }
 
 button:active {
-  transform: translate(3px,5px);
-  box-shadow: 3px 3px 2px 5px #265959;
+    transform: translate(3px, 5px);
+    box-shadow: 1px 1px 1px 2px #265959;
 }

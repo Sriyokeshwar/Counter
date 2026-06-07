@@ -1,3 +1,4 @@
+/* Google Font Import */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 body{
@@ -26,8 +27,118 @@ body{
     letter-spacing:clamp(0.1rem,2vw,0.3rem);
     word-spacing:clamp(0.2rem,4vw,0.6rem);
 
-    transition:background-color 0.5s ease,
-               box-shadow 0.5s ease;
+    transition:
+        background-color 0.5s ease,
+        box-shadow 0.5s ease,
+        transform 0.5s ease;
+}
+
+.con:hover{
+    background-color:rgba(126,249,249,0.2);
+    box-shadow:0 10px 25px rgba(19,119,119,0.4);
+    transform:translateY(-5px);
+}
+
+.tt{
+    font-size:clamp(1.2rem,5vw,1.8rem);
+    font-weight:bold;
+    color:#050fd0;
+    border-radius:30px;
+}
+
+#h{
+    padding:10px;
+    border-radius:50px;
+}
+
+#t1,
+#t2,
+#t3{
+    opacity:1;
+    text-shadow:4px 4px 2px #1789f5;
+    transition:
+        opacity 4s ease,
+        text-shadow 4s ease;
+}
+
+#t1.fade-out,
+#t2.fade-out,
+#t3.fade-out{
+    opacity:0;
+    text-shadow:80px -15px 1px #abcbff;
+}
+
+.count-display{
+    text-align:center;
+    font-size:clamp(3rem,15vw,6rem);
+    color:#0410f7;
+    margin:20px 0;
+    font-weight:600;
+}
+
+.btns{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+}
+
+button{
+    padding:12px 20px;
+    width:100%;
+    max-width:180px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+
+    font-size:24px;
+    font-weight:bold;
+    color:white;
+
+    background-image:linear-gradient(
+        90deg,
+        #0581a7,
+        #030bb3
+    );
+
+    box-shadow:3px 3px 2px 1px #0080ff;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-image 0.3s ease,
+        color 0.3s ease;
+}
+
+button:hover{
+    background-image:linear-gradient(
+        75deg,
+        #4850e9,
+        #4bc5ea
+    );
+
+    color:black;
+    text-shadow:2px 2px 5px #09637E;
+    box-shadow:0 8px 20px rgba(38,89,89,0.4);
+    transform:translateY(-3px);
+}
+
+button:active{
+    transform:translateY(2px);
+    box-shadow:1px 1px 3px rgba(38,89,89,0.5);
+}
+
+@media (min-width:600px){
+    .btns{
+        flex-direction:row;
+        justify-content:center;
+    }
+
+    .con{
+        width:60%;
+        letter-spacing:0.2rem;
+        word-spacing:0.5rem;
+    }
 }
 
 @media (max-width:900px){
